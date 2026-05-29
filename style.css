@@ -8,21 +8,21 @@ body{
   animation: gradientBG 10s ease infinite;
 }
 
-/* background animation */
+
 @keyframes gradientBG {
   0% {background-position: 0% 50%;}
   50% {background-position: 100% 50%;}
   100% {background-position: 0% 50%;}
 }
 
-/* HEADER */
+
 .header{
   text-align: center;
   color: white;
   margin-bottom: 20px;
 }
 
-/* GLASS CARDS */
+
 .box{
   background: rgba(255,255,255,0.15);
   backdrop-filter: blur(10px);
@@ -39,7 +39,7 @@ body{
   transform: translateY(-5px);
 }
 
-/* INPUTS */
+
 input, textarea{
   width: 100%;
   padding: 10px;
@@ -49,7 +49,7 @@ input, textarea{
   outline: none;
 }
 
-/* BUTTONS */
+
 button{
   padding: 10px 15px;
   border: none;
@@ -65,7 +65,7 @@ button:hover{
   transform: scale(1.05);
 }
 
-/* TASKS */
+
 li{
   list-style: none;
   padding: 10px;
@@ -87,7 +87,7 @@ li button{
   color: white;
 }
 
-/* PROGRESS BAR */
+
 .progress{
   width: 100%;
   height: 10px;
@@ -104,13 +104,12 @@ li button{
   transition: 0.3s;
 }
 
-/* DARK MODE */
 .dark{
   background: #111;
   color: white;
 }
 
-/* 📱 MOBILE RESPONSIVE FIX */
+
 @media (max-width: 768px) {
   .box {
     width: 90%;
@@ -129,7 +128,7 @@ li button{
   }
 }
 
-/* smoother delete button */
+
 li button {
   background: red;
   color: white;
@@ -137,11 +136,11 @@ li button {
   border-radius: 6px;
 }
 
-/* task text spacing fix */
+
 li span {
   flex: 1;
 }
-/* TASK ANIMATION */
+
 .task-enter {
   animation: popIn 0.25s ease;
 }
@@ -157,7 +156,7 @@ li span {
   }
 }
 
-/* DRAG STYLE */
+
 .dragging {
   opacity: 0.5;
   transform: scale(0.98);

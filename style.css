@@ -1,0 +1,164 @@
+body{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #74ebd5, #ACB6E5, #e0c3fc, #8ec5fc);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+}
+
+/* background animation */
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* HEADER */
+.header{
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* GLASS CARDS */
+.box{
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 70%;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  transition: 0.3s;
+  color: white;
+}
+
+.box:hover{
+  transform: translateY(-5px);
+}
+
+/* INPUTS */
+input, textarea{
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+/* BUTTONS */
+button{
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #ffffff;
+  color: #333;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+button:hover{
+  transform: scale(1.05);
+}
+
+/* TASKS */
+li{
+  list-style: none;
+  padding: 10px;
+  margin: 8px 0;
+  background: rgba(255,255,255,0.2);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.2s;
+}
+
+li:hover{
+  background: rgba(255,255,255,0.3);
+}
+
+li button{
+  background: red;
+  color: white;
+}
+
+/* PROGRESS BAR */
+.progress{
+  width: 100%;
+  height: 10px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 10px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.progress-bar{
+  height: 10px;
+  width: 0%;
+  background: #00ffcc;
+  transition: 0.3s;
+}
+
+/* DARK MODE */
+.dark{
+  background: #111;
+  color: white;
+}
+
+/* 📱 MOBILE RESPONSIVE FIX */
+@media (max-width: 768px) {
+  .box {
+    width: 90%;
+    padding: 15px;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+/* smoother delete button */
+li button {
+  background: red;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+/* task text spacing fix */
+li span {
+  flex: 1;
+}
+/* TASK ANIMATION */
+.task-enter {
+  animation: popIn 0.25s ease;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* DRAG STYLE */
+.dragging {
+  opacity: 0.5;
+  transform: scale(0.98);
+}

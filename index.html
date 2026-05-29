@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Study Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="header">
+    <h1>📚 Smart Study Dashboard</h1>
+    <p id="greet"></p>
+
+    <button onclick="toggleTheme()">🌙 Theme</button>
+  </div>
+
+  <div class="box">
+    <h2>📊 Stats</h2>
+    <p id="stats">Tasks: 0</p>
+
+    <div class="progress">
+      <div class="progress-bar" id="bar"></div>
+    </div>
+  </div>
+
+  <div class="box">
+    <h2>Tasks</h2>
+
+    <input id="taskInput" placeholder="write task here">
+    <button onclick="addTask()">Add</button>
+
+    <ul id="list"></ul>
+  </div>
+
+  <div class="box">
+    <h2>Pomodoro</h2>
+    <h1 id="time">25:00</h1>
+
+    <button onclick="start()">Start</button>
+    <button onclick="reset()">Reset</button>
+  </div>
+
+  <div class="box">
+    <h2>Notes</h2>
+    <textarea id="notes" placeholder="write something..."></textarea>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

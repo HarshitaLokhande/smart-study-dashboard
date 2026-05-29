@@ -1,5 +1,7 @@
 📚 Smart Study Dashboard
 
+🚀 LIVE LINK : https://harshitalokhande.github.io/smart-study-dashboard/
+
 A simple yet powerful productivity web app built using HTML, CSS, and JavaScript.
 It helps users manage tasks, track focus time, and write quick notes — all in one place.
 
@@ -64,6 +66,4 @@ Better task categorization (priority system)
 👩‍💻 Author
 
 Made by Harshita Lokhande 
-
-🚀 DEMO LINK : 
 

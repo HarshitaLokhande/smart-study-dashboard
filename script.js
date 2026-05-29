@@ -2,10 +2,10 @@ let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 let timer = 1500;
 let interval = null;
 
-// DRAG STATE
+
 let draggedIndex = null;
 
-// INIT
+
 window.onload = function () {
   renderTasks();
   loadNotes();
@@ -13,7 +13,7 @@ window.onload = function () {
   greetUser();
 };
 
-// ================= GREETING =================
+
 function greetUser() {
   let hour = new Date().getHours();
   let greet = "Good Night 🌙";
@@ -25,7 +25,7 @@ function greetUser() {
   document.getElementById("greet").innerText = greet;
 }
 
-// ================= TASKS =================
+
 function addTask() {
   let input = document.getElementById("taskInput");
   if (!input.value.trim()) return;
@@ -58,7 +58,7 @@ function renderTasks() {
       span.style.opacity = "0.6";
     }
 
-    // ✔ TOGGLE DONE
+  
     span.onclick = () => {
       tasks[index].done = !tasks[index].done;
       saveTasks();
@@ -66,7 +66,7 @@ function renderTasks() {
       updateStats();
     };
 
-    // ✏ INLINE EDIT (NEW)
+  
     span.ondblclick = () => {
       let newText = prompt("Edit task:", task.text);
       if (newText) {
@@ -76,7 +76,7 @@ function renderTasks() {
       }
     };
 
-    // ❌ DELETE
+   
     let del = document.createElement("button");
     del.innerText = "X";
 
@@ -88,7 +88,7 @@ function renderTasks() {
       updateStats();
     };
 
-    // DRAG EVENTS
+   
     li.addEventListener("dragstart", () => {
       draggedIndex = index;
       li.classList.add("dragging");
@@ -113,12 +113,11 @@ function renderTasks() {
   });
 }
 
-// ================= STORAGE =================
 function saveTasks() {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
-// ================= STATS =================
+
 function updateStats() {
   let total = tasks.length;
   let done = tasks.filter(t => t.done).length;
@@ -130,7 +129,7 @@ function updateStats() {
   document.getElementById("bar").style.width = percent + "%";
 }
 
-// ================= TIMER =================
+
 function start() {
   if (interval) return;
 
@@ -159,7 +158,7 @@ function reset() {
   document.getElementById("time").innerText = "25:00";
 }
 
-// ================= NOTES =================
+
 function saveNotes() {
   localStorage.setItem("myNotes",
     document.getElementById("notes").value
@@ -174,7 +173,7 @@ function loadNotes() {
 document.getElementById("notes")
   .addEventListener("input", saveNotes);
 
-// ================= THEME =================
+
 function toggleTheme() {
   document.body.classList.toggle("dark");
 }
